@@ -15,7 +15,4 @@ spec:
         backend:
           serviceName: webui
           servicePort: http
-  backend:
-    serviceName: webui
-    servicePort: http
 {{- end }}
