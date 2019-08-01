@@ -24,6 +24,10 @@ WebUi:
   Name: webui
   ServicePort: 8080
   ContainerPort: 8080
+  Ingress:
+    Enabled: true
+    Path: "/"
+    Tls: []
 
 Worker:
   Name: worker
@@ -54,7 +58,7 @@ Zeppelin:
   ContainerPort: 8080
   ServiceType: LoadBalancer
   Ingress:
-    Enabled: false
+    Enabled: true
     Path: "/"
     Tls: []
   #    - Hosts:
