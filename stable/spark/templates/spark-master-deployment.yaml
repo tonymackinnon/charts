@@ -63,6 +63,7 @@ spec:
           ports:
             - containerPort: {{ .Values.Master.ContainerPort }}
             - containerPort: {{ .Values.WebUi.ContainerPort }}
+              name: http
           resources:
             requests:
               cpu: "{{ .Values.Master.Cpu }}"
