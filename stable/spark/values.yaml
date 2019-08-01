@@ -30,7 +30,7 @@ WebUi:
     Path: "/"
     Tls: []
     Hosts:
-    - spark-master.lab.bmlldev.com
+    - spark-webui.lab.bmlldev.com
 
 
 Worker:
