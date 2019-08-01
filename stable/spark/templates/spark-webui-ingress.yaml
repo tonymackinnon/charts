@@ -1,3 +1,5 @@
+{{- $ingress := .Values.WebUi.Ingress -}}
+{{- if $ingress.Enabled }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -16,3 +18,4 @@ spec:
   backend:
     serviceName: webui
     servicePort: http
+{{- end }}
