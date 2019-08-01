@@ -19,17 +19,18 @@ Master:
   # Set Master JVM memory. Default 1g
   # DaemonMemory: 1g
   ServiceType: ClusterIP
+
+
+WebUi:
+  Name: webui
+  ServicePort: 8080
+  ContainerPort: 8080
   Ingress:
     Enabled: true
     Path: "/"
     Tls: []
     Hosts:
     - spark-master.lab.bmlldev.com
-
-WebUi:
-  Name: webui
-  ServicePort: 8080
-  ContainerPort: 8080
 
 
 Worker:
