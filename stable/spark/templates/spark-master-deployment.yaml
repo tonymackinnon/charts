@@ -27,6 +27,7 @@ spec:
   ports:
     - port: {{ .Values.WebUi.ServicePort }}
       targetPort: {{ .Values.WebUi.ContainerPort }}
+      name: http
   selector:
     component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
   type: {{ .Values.Master.ServiceType }}
