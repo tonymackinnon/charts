@@ -27,10 +27,6 @@ WebUi:
   ContainerPort: 8080
   Ingress:
     Enabled: true
-    Path: "/"
-    Tls: []
-    Hosts:
-    - spark-webui.lab.bmlldev.com
 
 
 Worker:
