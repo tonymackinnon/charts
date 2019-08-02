@@ -26,6 +26,8 @@ WebUi:
   ServicePort: 8080
   ContainerPort: 8080
   ServiceType: ClusterIP
+  Ingress:
+    Enabled: true
 
 
 Worker:
