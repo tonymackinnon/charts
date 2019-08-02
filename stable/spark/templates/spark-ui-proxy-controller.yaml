@@ -20,7 +20,7 @@ spec:
             requests:
               cpu: 100m
           args:
-            - spark-master:8080
+            - spark-webui:8080
           livenessProbe:
               httpGet:
                 path: /
