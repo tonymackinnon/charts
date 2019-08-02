@@ -1,0 +1,18 @@
+{{- $ingress := .Values.WebUi.Ingress -}}
+{{- if $ingress.Enabled }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: spark-webui-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: spark-webui.lab.bmlldev.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: webui
+          servicePort: http
+{{- end }}
